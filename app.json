@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "English Dictionary",
-    "slug": "dictionary-app-stage-1",
+    "name": "Diccionario en inglés",
+    "slug": "app de diccionario etapa-1",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
