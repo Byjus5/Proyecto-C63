@@ -8,7 +8,7 @@ export default class HomeScreen extends Component{
       text: '',
       isSearchPressed: false,
       isLoading: false,
-      word  : "Loading...",
+      word  : "Cargando...",
       lexicalCategory :'',
       definition : ""
     };
@@ -53,7 +53,7 @@ export default class HomeScreen extends Component{
         {
           this.setState({
             "word" : this.state.text, 
-            "definition" :"Not Found",
+            "definition" :"No se encontró",
             
           })
 
@@ -68,7 +68,7 @@ export default class HomeScreen extends Component{
         <Header
           backgroundColor={'purple'}
           centerComponent={{
-            text: 'Pocket Dictionary',
+            text: 'Diccionario de bolsillo',
             style: { color: '#fff', fontSize: 20 },
           }}
         />
@@ -80,7 +80,7 @@ export default class HomeScreen extends Component{
               this.setState({
                 text: text,
                 isSearchPressed: false,
-                word  : "Loading...",
+                word  : "Cargando...",
                 lexicalCategory :'',
                 examples : [],
                 definition : ""
@@ -95,19 +95,19 @@ export default class HomeScreen extends Component{
               this.setState({ isSearchPressed: true });
               this.getWord(this.state.text)
             }}>
-            <Text style={styles.searchText}>Search</Text>
+            <Text style={styles.searchText}>Buscar</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.outputContainer}>
           <Text style={{fontSize:20}}>
             {
-              this.state.isSearchPressed && this.state.word === "Loading..."
+              this.state.isSearchPressed && this.state.word === "Cargando..."
               ? this.state.word
               : ""
             }
           </Text>
             {
-              this.state.word !== "Loading..." ?
+              this.state.word !== "Cargando..." ?
               (
                 <View style={{justifyContent:'center', marginLeft:10 }}>
                   <View style={styles.detailsContainer}>
